@@ -1,0 +1,20 @@
+{
+  "name": "hyper-client",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "fetch-mock": "^9.11.0",
+    "typescript": "^4.2.3",
+    "uvu": "^0.5.1"
+  },
+  "scripts": {
+    "test": "node test/index_test.js"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "node-fetch": "^2.6.1",
+    "ramda": "^0.27.1"
+  }
+}
