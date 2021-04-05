@@ -8,7 +8,13 @@ export const data = config => {
 
   const init = () => {
     // initialize database
-    return fetch(config.url('data'), { method: 'PUT' }).then(res => res.ok 
+    return fetch(config.url('data'), { 
+      method: 'PUT', 
+      headers: {
+        'Content-Type': 'application/json',
+        authorization: `Bearer ${config.token()}`
+      }
+    }).then(res => res.ok 
       ? (console.log(`${config.url('data')} initialized!`), res.json())
       : (console.log(`${config.url('data')} could not be initialized!`), res.json())
     )

@@ -30,3 +30,6 @@ https://key:secret@cloud.hyper.io/app - this connection string gives the hyper c
 * pathname - provides the hyper app name
 
 The hyper client expects this configuration to be available via the `HYPER` environment variable.
+
+```
+

@@ -11,6 +11,7 @@ import { dataGetTest } from './data-get_test.js'
 import { dataPostTest } from './data-post_test.js'
 import { dataPutTest } from './data-put_test.js'
 import { dataQueryTest } from './data-query_test.js'
+import { setupSearchTest } from './search-setup_test.js'
 import { searchAddTest } from './search-add_test.js'
 import { searchFindTest } from './search-find_test.js'
 import { searchGetTest } from './search-get_test.js'
@@ -34,12 +35,26 @@ dataPostTest(fetch)
 dataPutTest(fetch)
 dataQueryTest(fetch)
 dataDeleteTest(fetch)
+// dataBatchTest(fetch)
 
 // search tests
-// setupSearchTest(fetch)
+setupSearchTest(fetch)
 searchAddTest(fetch)
 searchFindTest(fetch)
 searchGetTest(fetch)
+// searchDeleteTest(fetch)
+// searchBatchTest(fetch)
+//
+
+// storage tests
+// setupStorageTest(fetch)
+// storageUploadTest(fetch)
+// storageDownloadTest(fetch)
+
+// queue tests
+// setupQueueTest(fetch)
+// queuePostTest(fetch)
+
 
 test.run()
 
