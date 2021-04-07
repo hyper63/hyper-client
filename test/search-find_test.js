@@ -9,7 +9,8 @@ export const searchFindTest = fetch => {
   })
 
   test('find document using search', async () => {
-    const result = await hyper().search('movie').find('Kong')
+    const h = hyper('hyperio://key:secret@localhost:6363/app')
+    const result = await h.search('movie').find('Kong')
     assert.ok(result.ok)
   })
 }

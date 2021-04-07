@@ -8,7 +8,8 @@ export const searchAddTest = fetch => {
     body: { ok: true }
   })
   test('add search doc', async () => {
-    const result = await hyper().search('movie').add('1', { id: '1', title: 'Kong vs Godzilla'})
+    const h = hyper('hyperio://key:secret@localhost:6363/app')
+    const result = await h.search('movie').add('1', { id: '1', title: 'Kong vs Godzilla'})
     assert.ok(result.ok)
   })
 }

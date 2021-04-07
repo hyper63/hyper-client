@@ -8,7 +8,7 @@ export const cacheGetTest = fetch => {
   })
 
   test('get from cache', async () => {
-    const h = hyper()
+    const h = hyper('http://key:secret@localhost:6363/app')
     const result = await h.cache('movie').get('1')
     assert.equal(result.title, 'Ghostbusters')
   })

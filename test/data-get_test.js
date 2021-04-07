@@ -8,7 +8,7 @@ export const dataGetTest = fetch => {
     status: 200, body: { title: 'Ghostbusters'}})
 
   test('get movie document', async () => {
-    const h = hyper()
+    const h = hyper('hyperio://key:secret@localhost:6363/app')
     const result = await h.data('movie').get('1')
     assert.equal(result.title, 'Ghostbusters')
   })

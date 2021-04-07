@@ -9,7 +9,8 @@ export const cacheDeleteTest = fetch => {
   })
 
   test('delete cache key value', async () => {
-    const res = await hyper().cache('movie').delete('1')
+    const h = hyper('hyperio://key:secret@localhost:6363/app')
+    const res = await h.cache('movie').delete('1')
     assert.ok(res.ok)
   })
 

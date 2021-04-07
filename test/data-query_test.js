@@ -8,7 +8,7 @@ export const dataQueryTest = fetch => {
     status: 200, body: { id: '1', title: 'Ghostbusters'}})
 
   test('get movie', async () => {
-    const h = hyper()
+    const h = hyper('hyperio://key:secret@localhost:6363/app')
     const movie = await h.data('movie').query({
       type: 'movie',
       id: '1'

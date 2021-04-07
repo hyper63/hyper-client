@@ -7,7 +7,7 @@ export const dataPostTest = fetch => {
   fetch.post('http://localhost:6363/data/app', { status: 201, body: {ok: true }})
 
   test('post', async () => {
-    const h = hyper()
+    const h = hyper('hyperio://key:secret@localhost:6363/app')
     const result = await h.data('movie').post({title: 'Ghostbusters'})
     assert.ok(result.ok)
 
