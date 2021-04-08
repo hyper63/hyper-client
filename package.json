@@ -11,7 +11,7 @@
     "uvu": "^0.5.1"
   },
   "scripts": {
-    "build": "esbuild src/index.js --bundle --platform=node --outfile=lib/client.js",
+    "build": "esbuild src/index.js --format=esm --bundle --platform=node --outfile=lib/client.js",
     "test": "node test/index_test.js"
   },
   "dependencies": {
