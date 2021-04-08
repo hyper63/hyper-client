@@ -4,7 +4,7 @@ import { get } from './get.js'
 import { put } from './put.js'
 import { del } from './delete.js'
 
-import R from 'ramda'
+import { default as R } from 'ramda'
 
 const { curry } = R
 

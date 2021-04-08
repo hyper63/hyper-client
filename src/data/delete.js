@@ -1,4 +1,4 @@
-import R from 'ramda'
+import { default as R } from 'ramda'
 
 const { assoc, curry } = R
 

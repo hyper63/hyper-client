@@ -2,14 +2,16 @@
   "name": "@hyperio/client",
   "type": "module",
   "version": "1.0.1",
-  "main": "src/index.js",
+  "main": "lib/client.js",
   "license": "MIT",
   "devDependencies": {
+    "esbuild": "^0.11.6",
     "fetch-mock": "^9.11.0",
     "typescript": "^4.2.3",
     "uvu": "^0.5.1"
   },
   "scripts": {
+    "build": "esbuild src/index.js --bundle --platform=node --outfile=lib/client.js",
     "test": "node test/index_test.js"
   },
   "dependencies": {
