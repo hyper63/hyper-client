@@ -1,8 +1,4 @@
-import { default as R } from 'ramda'
-
-const { assoc, curry } = R
-
-export const get = curry((config, type, id) =>
+export const get = (config, type) => id =>
   fetch(config.url('data') + '/' + id, {
     headers: { 
       'Content-Type': 'application/json', 
@@ -10,4 +6,3 @@ export const get = curry((config, type, id) =>
     }
   })
     .then(res => res.json())
-)

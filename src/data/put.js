@@ -1,8 +1,6 @@
-import R from 'ramda'
+const assoc = (key, value, object) => ({ ...object, [key]: value }) 
 
-const { assoc, curry } = R
-
-export const put = curry((config, type, id, data) =>
+export const put = (config, type) => (id, data) =>
   fetch(config.url('data') + '/' + id, {
     method: 'PUT',
     headers: { 
@@ -14,4 +12,4 @@ export const put = curry((config, type, id, data) =>
     )
   })
     .then(res => res.json())
-)
+

@@ -1,8 +1,4 @@
-import { default as R } from 'ramda'
-
-const { assoc, curry } = R
-
-export const del = curry((config, type, id) =>
+export const del = (config, type) => id =>
   fetch(config.url('data') + '/' + id, {
     method: 'DELETE',
     headers: { 
@@ -11,4 +7,3 @@ export const del = curry((config, type, id) =>
     }
   })
     .then(res => res.json())
-)
