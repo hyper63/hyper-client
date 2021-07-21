@@ -1,6 +1,6 @@
 import { data } from './data/index.js'
-//import { cache } from './cache/index.js'
-//import { search } from './search/index.js'
+import { cache } from './cache/index.js'
+import { search } from './search/index.js'
 import { createConnection } from './config.js'
 
 import fetch from 'node-fetch'
@@ -16,7 +16,7 @@ export const hyper = (s) => {
 
   return Object.freeze({
     data: data(c),
-    //cache: cache(c),
-    //search: search(c)
+    cache: cache(c),
+    search: search(c)
   })
 }
